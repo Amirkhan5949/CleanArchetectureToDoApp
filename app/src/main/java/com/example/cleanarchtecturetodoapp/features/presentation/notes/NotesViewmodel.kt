@@ -13,9 +13,10 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
-class NotesViewmodel(val noteUseCases: NoteUseCases) : ViewModel() {
+class NotesViewmodel @Inject constructor(val noteUseCases: NoteUseCases) : ViewModel() {
 
     private var recentlyDeleteNote: Note? = null
     private var getNoteJob: Job? = null
