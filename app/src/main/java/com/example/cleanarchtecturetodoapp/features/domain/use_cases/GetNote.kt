@@ -5,7 +5,7 @@ import com.example.cleanarchtecturetodoapp.features.domain.repository.NoteReposi
 
 class GetNote (private val noteRepository: NoteRepository) {
 
-   suspend fun  invoke(id : Int):Note?{
+   suspend operator fun  invoke(id : Int):Note?{
        return noteRepository.getNoteById(id)
     }
 }

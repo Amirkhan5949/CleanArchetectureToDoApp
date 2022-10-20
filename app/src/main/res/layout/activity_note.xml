@@ -3,9 +3,108 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".NoteActivity">
 
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginTop="16dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/color_green"
+        android:id="@+id/color_saffron"
+        android:background="@drawable/bgcolot"
+        android:backgroundTint="@color/saffron"/>
 
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@+id/color_saffron"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/color_green"
+        app:layout_constraintEnd_toStartOf="@id/color_blue"
+        android:background="@drawable/bgcolot"
+        android:backgroundTint="@color/green"/>
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@+id/color_green"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/color_blue"
+        app:layout_constraintEnd_toStartOf="@id/color_teal"
+        android:background="@drawable/bgcolot"
+        android:backgroundTint="@color/purple_700"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@+id/color_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/color_teal"
+        app:layout_constraintEnd_toStartOf="@id/color_red"
+        android:background="@drawable/bgcolot"
+        android:backgroundTint="@color/teal_200"/>
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@+id/color_teal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/color_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bgcolot"
+        android:backgroundTint="@color/red"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Choose a title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@null"
+        android:layout_marginTop="20dp"
+        android:id="@+id/title"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/color_green"
+        android:layout_marginHorizontal="16dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter some content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@null"
+        android:layout_marginTop="20dp"
+        android:id="@+id/content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginHorizontal="16dp"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="60dp"
+        android:id="@+id/floating"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:src="@drawable/save"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

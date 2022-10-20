@@ -1,5 +1,6 @@
 package com.example.cleanarchtecturetodoapp
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.transition.AutoTransition
@@ -38,6 +39,10 @@ class NotesActivity : AppCompatActivity() {
         mbindinding.explore.setOnClickListener {
             if (mbindinding.hiddenView.visibility == View.VISIBLE) mbindinding.hiddenView.collapse()
             else mbindinding.hiddenView.expand()
+        }
+
+        mbindinding.floating.setOnClickListener {
+            startActivity(Intent(this, NoteActivity::class.java))
         }
     }
 }
